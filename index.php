@@ -10,6 +10,12 @@
     <script defer src="main.js"></script>
     <title>Lapak UMKM Desa Ketanen</title>
 </head>
+<style>
+        .btn a {
+            color: white; /* Mengubah warna teks menjadi putih */
+            text-decoration: none; /* Menghilangkan garis bawah */
+        }
+    </style>
 <body>
     <div class="swiper-container">
       <div class="swiper-wrapper">
@@ -17,7 +23,7 @@
           <div class="content" data-content="one">
             <h1>Selamat Datang di Lapak UMKM Desa Ketanen</h1>
             <p>
-            Ketanen, sebuah desa yang penuh inovasi dan kreativitas, kini hadir dengan platform digital yang kekinian untuk masyarakat luas! Kami adalah rumah bagi berbagai Usaha Mikro, Kecil, dan Menengah (UMKM) yang siap memanjakan kamu dengan produk-produk unik dan berkualitas. Dari kerajinan tangan hingga kuliner lezat, setiap produk kami mencerminkan semangat lokal yang kental dan keberlanjutan.
+            Ketanen, sebuah desa yang penuh inovasi dan kreativitas, Kami adalah rumah bagi berbagai Usaha Mikro, Kecil, dan Menengah (UMKM) yang siap memanjakan kamu dengan produk-produk unik dan berkualitas. Dari kerajinan tangan hingga kuliner lezat, setiap produk kami mencerminkan semangat lokal yang kental dan keberlanjutan.
             </p>
           </div>
           <div class="background" data-item="one"></div>
@@ -69,19 +75,16 @@
     </div>
 
     <div class="footer">
+    <button class="btn">
+    <i class="fas fa-sign-in mr-15"></i>
+        <a href="login.php">Login Admin</a>
+      </button>
+      <hr />
       <div class="feature">
         <i class="fa-solid fa-house"></i>
         <div>
           <p>Produk</p>
           <small>UMKM Terbaik</small>
-        </div>
-      </div>
-      <hr />
-      <div class="feature">
-        <i class="fa-solid fa-headphones"></i>
-        <div>
-          <p>Lapak</p>
-          <small>Tersertifikasi Halal</small>
         </div>
       </div>
       <hr />

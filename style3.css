@@ -1,0 +1,408 @@
+*{
+    padding: 0;
+    margin: 0;
+  }
+  
+  .body_login{
+    background-image: url(bg2.jpg);
+    background-size: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .kotak{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vh;
+    margin-bottom: 9vh;
+    margin-left: 5vh;
+    margin-right: 5vh;
+    animation: customAni2 1s linear 0s 1 normal none;
+  }
+  @keyframes customAni2 {
+  0% {
+  transform: scale3d(1, 1, 1);
+  }
+  
+  30% {
+  transform: scale3d(1.25, 0.75, 1);
+  }
+  
+  40% {
+  transform: scale3d(0.75, 1.25, 1);
+  }
+  
+  50% {
+  transform: scale3d(1.15, 0.85, 1);
+  }
+  
+  65% {
+  transform: scale3d(0.95, 1.05, 1);
+  }
+  
+  75% {
+  transform: scale3d(1.05, 0.95, 1);
+  }
+  
+  100% {
+  transform: scale3d(1, 1, 1);
+  }
+  }
+  
+  .formlogin{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    backface-visibility: visible;
+    width: 350px;
+    height: 350px;
+    margin-bottom: 10vh;
+    border: 5px solid #faf8f811;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(246, 245, 247);
+    box-shadow: -3px -3px 9px #ff512f,
+    3px 3px 7px rgba(147, 149, 151, 0.671);
+  }
+  label{
+    width: 15vh;
+    background-color: teal;
+    border: 1px solid rgb(108, 233, 233);
+    border-radius: 15px;
+    padding: 6px;
+    display: block;
+    float: left;
+    cursor: pointer;
+    /* Copy code to element you want to animate */
+  animation: customAni 1s ease-in-out 1s normal both;
+  }
+  /* Copy this code after the above code */
+  @keyframes customAni {
+    0% {
+      transform: translateY(0);
+    }
+  
+    100% {
+      transform: translateY(-28px);
+    }
+  }
+  .inputbox{
+    border: 1px solid teal;
+    border-radius: 15px;
+    margin: 18px;
+    width: 45vh;
+    display: flex;
+  }
+  #username,
+#password {
+    background: transparent;
+    outline: none;
+    padding: 6px;
+    border-style: none;
+    color: white; /* Warna teks putih */
+    margin-left: -70px;
+    width: 45vh;
+}
+
+  
+  input[type=submit]{
+    width: 30vh;
+    height: 5vh;
+    background-color: teal;
+    color: rgb(255, 253, 253);
+    padding: 4px 10px;
+    margin: 8px 0;
+    border: 1px solid rgb(226, 219, 231);
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  input[type=submit]:hover {
+    background-color: rgb(120, 246, 255);
+    transition: .3s;
+    color: #000;
+    animation: wobble 2s ease 0s infinite;
+  }
+  /* h2,h5,i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  } 
+  h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid teal;
+    border-radius: 15px;
+    padding-bottom: 10px;
+  }*/
+  .logout{
+    display: flex;
+    position: absolute;
+    margin-bottom: 35%;
+    margin-top: 65%;
+    margin-left: 10vh;
+  }
+  .footer{
+    padding-top: 2vh;
+    text-align: center;
+    color: white;
+    height: 5vh;
+    width: 100%;
+    background-color: teal;
+  }
+  .footer2{
+    margin-top: 45vh;
+    padding-top: 1vh;
+    text-align: center;
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    backface-visibility: visible;
+    border: 5px solid #faf8f811;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(246, 245, 247);
+    box-shadow: -3px -3px 9px teal,
+    3px 3px 7px rgba(147, 149, 151, 0.671);
+  }
+  body{
+    background-image: url(bg4.jpg);
+    background-size: 110%;
+    color: rgb(250, 249, 249);
+  }
+  .tambah{
+    width: 15vh; 
+    height: 5vh;
+    margin-top: 2vh;
+    margin-right: 100vh;
+    background-color: teal;
+    color: rgb(255, 253, 253);
+    padding: 4px 10px;
+    border: 1px solid rgb(226, 219, 231);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .tambah a{
+    text-decoration:none;
+    color: rgb(250, 248, 248);
+  }
+  .tambah:hover{
+    transition: .5s;
+    background-color: transparent;
+    border: 1px solid white;
+  }
+  .tambah a:hover{
+    transition: .3s;
+    color: white;
+  }
+  table{
+    margin: 2vh 35vh 2vh;
+  }
+  .nav{
+    font-size: 3em;
+    height: 10vh;
+    width: 100%;
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    backface-visibility: visible;
+    margin-bottom: 10vh;
+    border: 5px solid #faf8f811;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    box-shadow: -3px -3px 9px #ffffffa2,
+    3px 3px 7px rgba(147, 149, 151, 0.671);
+    }
+    .judul{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 5vh 25vh 2vh;
+      position: relative;
+    }
+  
+    a{
+      color: white;
+      text-decoration: none;
+    }
+  
+    .content{
+      height: auto;
+    width: auto;
+    display: flex;
+    margin: 15vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    backface-visibility: visible;
+    margin-bottom: 10vh;
+    border: 5px solid #faf8f811;
+    border-radius: 15px;
+    backdrop-filter: blur(25px);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    box-shadow: -3px -3px 9px #ffffffa2,
+    3px 3px 7px rgba(147, 149, 151, 0.671);
+    }
+  
+  #namat{* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body_login {
+    background-image: url(bg2.jpg); /* Ganti dengan path gambar Anda */
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.kotak {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.inputbox {
+    border: 1px solid teal;
+    border-radius: 15px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#username,
+#password {
+    background: transparent;
+    outline: none;
+    padding: 10px;
+    border: none;
+    color: white; /* Warna teks putih */
+    width: 100%;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+  z-index: 10;
+  position: relative;
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(0, 128, 128, 0.8);
+    animation: wobble 2s ease 0s infinite;
+}
+
+      background: transparent;
+      outline: none;
+      padding: 6px;
+      border-style: none;
+      width: 45vh;
+      margin-left: -70px;
+  }
+
+  /* @keyframes fade-in-down {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  .fadein {
+    animation: fade-in-down 1.5s ease-in 0s 1;
+    
+  } */
+
+  @keyframes wobble {
+    0%, 100% { transform: translateX(0%); }
+    15% { transform: translateX(-25%) rotate(-5deg); }
+    30% { transform: translateX(20%) rotate(3deg); }
+    45% { transform: translateX(-15%) rotate(-3deg); }
+    60% { transform: translateX(10%) rotate(2deg); }
+    75% { transform: translateX(-5%) rotate(-1deg); }
+  }
+
+
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+.line-1 {
+    position: relative;
+    top: 50%;
+    width: 50em; /* Pastikan lebar cukup untuk teks */
+    margin: 0 auto;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    font-size: 20px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter {
+    animation: typewriter 15s steps(124) infinite normal both;
+           /* blinkTextCursor 500ms steps(44) infinite normal; */
+}
+
+@keyframes typewriter {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 50em; /* Lebar sama seperti elemen */
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes blinkTextCursor {
+    0% {
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    100% {
+        border-right-color: transparent;
+    }
+}
