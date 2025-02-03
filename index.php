@@ -77,7 +77,7 @@
     <div class="footer">
     <button class="btn">
     <i class="fas fa-sign-in mr-15"></i>
-        <a href="login.php">Login Admin</a>
+        <a href="login2.php">Login Admin</a>
       </button>
       <hr />
       <div class="feature">

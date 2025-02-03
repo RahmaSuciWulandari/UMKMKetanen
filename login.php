@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="icon" href="iconlogo.jpg" />
     <link rel="stylesheet" href="style3.css" type="text/css">
 </head>
-<body class="body_login" style="background-image: linear-gradient(45deg, #ff512f 0%, #f09819 51%, #ff512f 100%);">
+<body class="body_login" >
     <div class="kotak">
         <form action="" method="post" class="formlogin">
         <h2>Login</h2><br/>

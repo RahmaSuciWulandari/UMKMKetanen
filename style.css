@@ -253,7 +253,7 @@ body {
   .content{
   /* .content[data-content="three"] { */
     top: 55%;
-    left: 2%;
+    /* left: 2%; */
     width: 60%;
   }
 
@@ -283,13 +283,14 @@ body {
   }
 }
 
-@media (max-width: 790px) {
+
+@media (max-width: 768px) {
   .content{
     /* .content[data-content="two"],
     .content[data-content="three"] { */
       top: 30%;
-      left: 7%;
-      bottom: 3%;
+      /* left: 7%;
+      bottom: 3%; */
       width: 80%;
     } 
   .footer {
@@ -333,8 +334,8 @@ body {
   /* .content[data-content="two"],
   .content[data-content="three"] { */
     top: 30%;
-    left: 7%;
-    bottom: 3%;
+    /* left: 7%;
+    bottom: 3%; */
     width: 80%;
   }
 

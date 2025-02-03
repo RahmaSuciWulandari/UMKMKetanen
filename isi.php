@@ -1,6 +1,8 @@
 <?php
 include "config.php";
 
+
+
 // Periksa apakah parameter 'id_produk' ada dalam URL
 if (isset($_GET['id_produk'])) {
     $id_produk = intval($_GET['id_produk']); // Sanitasi input
@@ -12,7 +14,7 @@ if (isset($_GET['id_produk'])) {
             WHERE produk.id_produk = ?";
     
     // Menyiapkan query
-    $stmt = $koneksi->prepare(query: $sql);
+    $stmt = $koneksi->prepare($sql);
     if ($stmt === false) {
         die('Error preparing query: ' . $koneksi->error);
     }
@@ -71,98 +73,89 @@ $icon_map = [
     <style>
         body {
             font-family: 'Poppins', Arial, sans-serif;
-            background-color: #f5f5f5;
+            background-color: #f4f4f9;
             margin: 0;
             padding: 0;
+            color: #333;
         }
         .container {
             max-width: 1200px;
-            margin: 20px auto;
+            margin: 40px auto;
+            padding: 30px;
             background: #fff;
-            padding: 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-wrap: wrap;
+            gap: 20px;
         }
         .left-column {
             flex: 1;
-            max-width: 40%;
-            padding-right: 20px;
+            max-width: 50%;
+            text-align: center;
         }
         .right-column {
             flex: 1;
-            max-width: 60%;
+            max-width: 50%;
         }
         .product-image img {
-            width: 100%;
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
             border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .product-image img:hover {
+            transform: scale(1.05);
         }
         .product-thumbnails {
             display: flex;
-            margin-top: 10px;
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: center;
         }
         .product-thumbnails img {
-            width: 60px;
-            height: 60px;
-            margin-right: 8px;
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
             cursor: pointer;
-            border-radius: 5px;
-            border: 2px solid transparent;
-            transition: border-color 0.2s;
+            transition: transform 0.3s ease-in-out;
         }
         .product-thumbnails img:hover {
-            border-color: #ff5722;
+            transform: scale(1.1);
+            border: 2px solid #ff5722;
         }
         .product-title {
-            font-size: 24px;
+            font-size: 36px;
             font-weight: bold;
             color: #333;
-            margin-bottom: 10px;
-        }
-        .text-gray-500 {
-            color: #555;
-            font-size: 14px;
-            margin-bottom: 6px;
-        }
-        .text-blue-500 {
-            color: #3498db;
-            text-decoration: none;
-        }
-        .text-blue-500:hover {
-            text-decoration: underline;
+            margin: 20px 0;
         }
         .product-price {
-            font-size: 26px;
+            font-size: 28px;
             color: #e74c3c;
             font-weight: bold;
-            margin-bottom: 15px;
+            margin-bottom: 30px;
         }
         .product-description {
             font-size: 16px;
             color: #555;
             line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        .grid {
-            display: grid;
-            gap: 6px;
-        }
-        .grid-cols-2 {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .grid-cols-4 {
-            grid-template-columns: repeat(4, 1fr);
+            margin-bottom: 30px;
         }
         .keunggulan-card {
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: #f8f9fa;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: #f9f9f9;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            padding: 16px;
+            padding: 20px;
             text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .keunggulan-card:hover {
+            transform: translateY(-8px);
         }
         .keunggulan-icon {
             background: #e3fcef;
@@ -172,12 +165,11 @@ $icon_map = [
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         .keunggulan-icon img {
-            width: 40px;
-            height: 40px;
-            object-fit: contain;
+            width: 30px;
+            height: 30px;
         }
         .keunggulan-title {
             font-size: 14px;
@@ -186,42 +178,54 @@ $icon_map = [
         }
         .buttons {
             display: flex;
-            gap: 10px;
-            margin-top: 20px;
+            gap: 20px;
+            margin-top: 30px;
+            justify-content: space-between;
         }
+
+        .buy-now, .chat-seller {
+            padding: 18px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.3s ease, background 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48%;
+        }
+
         .buy-now {
-            flex: 1;
             background: #ff5722;
             color: white;
-            padding: 15px 20px;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 5px;
-            text-decoration: none;
-            text-align: center;
-            transition: background 0.3s;
         }
+
         .buy-now:hover {
             background: #e64a19;
+            transform: translateY(-5px);
         }
+
         .chat-seller {
-            flex: 1;
             background: #3498db;
             color: white;
-            padding: 15px 20px;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 5px;
-            text-decoration: none;
-            text-align: center;
-            transition: background 0.3s;
         }
+
         .chat-seller:hover {
             background: #2980b9;
+            transform: translateY(-5px);
         }
+
+        /* Tambahkan margin-left pada ikon untuk memberi spasi antara ikon dan teks */
+        .buy-now i, .chat-seller i {
+            margin-right: 10px;
+        }
+
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
+                padding: 20px;
             }
             .left-column, .right-column {
                 max-width: 100%;
@@ -252,20 +256,16 @@ $icon_map = [
     <div class="right-column">
         <h1 class="product-title"><?php echo htmlspecialchars($produk['nama_produk']); ?></h1>
 
-        <!-- Alamat Lapak -->
-        <p class="text-gray-500">
-            <?php echo htmlspecialchars($produk['alamat']); ?>
-            <a class="text-blue-500 font-semibold" href="lapak.php?id_lapak=<?php echo $produk['id_lapak']; ?>">Lihat Lapak</a>
-        </p>
-
         <p class="product-price">Rp. <?php echo number_format($produk['harga'], 0, ',', '.'); ?></p>
+
+        <!-- Deskripsi Produk -->
+        <h2>Deskripsi Produk</h2>
         <p class="product-description"><?php echo nl2br(htmlspecialchars($produk['deskripsi'])); ?></p>
 
         <!-- Keunggulan Produk -->
         <?php if (!empty($keunggulan_produk)): ?>
-            <div class="mt-12">
-                <h2 class="text-2xl font-semibold text-gray-700 mb-6">Keunggulan Produk</h2>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div style="margin-top: 10vh;">
+                <div class="keunggulan-card-container" style="display: flex; gap: 20px; flex-wrap: wrap;">
                     <?php foreach ($keunggulan_produk as $keunggulan): ?>
                         <div class="keunggulan-card">
                             <div class="keunggulan-icon">
@@ -286,8 +286,8 @@ $icon_map = [
             <a href="https://wa.me/<?php echo htmlspecialchars($produk['kontak']); ?>?text=Halo,%20saya%20ingin%20memesan%20<?php echo urlencode($produk['nama_produk']); ?>" class="buy-now">
                 <i class="fas fa-shopping-cart"></i> Beli Sekarang
             </a>
-            <a href="https://wa.me/<?php echo htmlspecialchars($produk['kontak']); ?>" class="chat-seller">
-                <i class="fas fa-comment-dots"></i> Chat Penjual
+            <a href="lapak.php?id_lapak=<?php echo $produk['id_lapak']; ?>" class="chat-seller">
+                <i class="fas fa-eye"></i> Lihat lapak
             </a>
         </div>
     </div>
