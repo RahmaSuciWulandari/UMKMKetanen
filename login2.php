@@ -36,6 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Admin Login</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="logokkn.jpg" />
     <style>
       body {
         margin: 0;
@@ -159,6 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         .container {
           flex-direction: column;
           width: 80%;
+          height: 85%;
         }
         .container {
           align-items: center;

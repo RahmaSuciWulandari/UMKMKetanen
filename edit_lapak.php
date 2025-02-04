@@ -104,6 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Lapak</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="logokkn.jpg" />
 </head>
 <body class="bg-gray-100 font-sans">
     <div class="max-w-xl mx-auto mt-10 bg-white p-6 rounded-md shadow-md">

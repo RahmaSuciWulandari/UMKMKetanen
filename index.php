@@ -9,7 +9,8 @@
     <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script defer src="main.js"></script>
     <title>Lapak UMKM Desa Ketanen</title>
-</head>
+    <link rel="icon" href="logokkn.jpg" />
+  </head>
 <style>
         .btn a {
             color: white; /* Mengubah warna teks menjadi putih */

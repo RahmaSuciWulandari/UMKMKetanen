@@ -40,6 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Login</title>
     <link rel="icon" href="iconlogo.jpg" />
     <link rel="stylesheet" href="style3.css" type="text/css">
+    <link rel="icon" href="logokkn.jpg" />
 </head>
 <body class="body_login" >
     <div class="kotak">

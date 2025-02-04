@@ -69,6 +69,7 @@ $result = $stmt->get_result();
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+  <link rel="icon" href="logokkn.jpg" />
   <style>
     .custom-font { font-family: 'Roboto', sans-serif; }
     .custom-navbar {

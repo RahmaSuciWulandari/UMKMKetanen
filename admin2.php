@@ -111,6 +111,7 @@ if (!isset($_SESSION["username"])) {
     <title>Dashboard Admin</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="icon" href="logokkn.jpg" />
 </head>
 <body class="bg-gray-100 font-sans antialiased">
 <div class="flex h-screen" >

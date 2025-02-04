@@ -140,6 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
   </script>
+<link rel="icon" href="logokkn.jpg" />
 </head>
 <body class="bg-gray-100 font-sans">
   <div class="flex h-screen">
