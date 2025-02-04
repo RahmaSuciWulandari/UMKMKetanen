@@ -94,6 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <title>Tambah Produk</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="icon" href="logokkn.png" />
   <script>
     function generateProductForms() {
         const jumlahProduk = parseInt(document.getElementById('jumlah_produk').value);
@@ -140,7 +141,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
   </script>
-<link rel="icon" href="logokkn.jpg" />
 </head>
 <body class="bg-gray-100 font-sans">
   <div class="flex h-screen">

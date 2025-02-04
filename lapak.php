@@ -47,7 +47,7 @@ while ($row = $result_produk->fetch_assoc()) {
   <title><?php echo htmlspecialchars($lapak['nama_lapak']); ?> - Lapak</title>
   <!-- Menggunakan Font Awesome untuk ikon -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" href="logokkn.jpg" />
+  <link rel="icon" href="logokkn.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <style>
     /* Reset dasar */

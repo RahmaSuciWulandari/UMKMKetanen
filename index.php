@@ -9,7 +9,7 @@
     <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script defer src="main.js"></script>
     <title>Lapak UMKM Desa Ketanen</title>
-    <link rel="icon" href="logokkn.jpg" />
+    <link rel="icon" href="logokkn.png" />
   </head>
 <style>
         .btn a {

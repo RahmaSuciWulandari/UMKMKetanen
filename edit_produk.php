@@ -120,7 +120,7 @@ if (isset($_GET['delete_gambar_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Produk</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="logokkn.jpg" />
+    <link rel="icon" href="logokkn.png" />
 </head>
 
 <body class="bg-gray-100 font-sans">
